@@ -1,0 +1,142 @@
+
+*{ 
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+  
+  body{
+  background-color: hsl(30, 38%,92%);
+  font-family: 'Montserrat',sans-serif;
+  font-size: 14px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container{
+  padding: 0 30px;
+  margin:30px auto;
+  
+}
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 700px;
+}
+
+.product-img img{
+  max-width: 100%;
+  display:inherit;
+}
+.product-info{
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.category{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 16px;
+  color:hsl(228,12%,48%);
+  font-weight: 500;
+}
+.name{
+  font-family: 'Fraunces',serif;
+  font-size: 34px;
+  line-height: 1em;
+  color: hsl(212, 21%, 14%);
+}
+.description{
+  color:hsl(228,12%,48%);
+  line-height: 1.6em;
+
+}
+.product-price{
+  display: flex;
+  align-items: center;
+}
+p.new-price{
+  color:hsl(158, 36%, 37%);
+  font-size: 25px;
+  font-family: 'Fraunces', serif;
+  padding-right: 25px;
+
+}
+p.old-price{
+ color:#8d8d8d;
+ text-decoration: line-through;
+
+}
+
+button{
+  cursor:pointer;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color:#fff;
+  background-color: hsl(158, 36%, 37%);
+  padding: 14px 0px;
+  border:none;
+  transition:all 0.5s ease-in-out; 
+  width:100%;
+}
+
+button img{
+    width:16px;
+    padding-right: 7px;
+  }
+
+button:hover{
+  background:hsl(158, 36%,37%);
+  box-shadow:0px 4px 35px -5px hsl(158, 36%,37%);
+  cursor:pointer; 
+  }
+@media only screen and (max-width: 628px){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  .product-img img{
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .product-info{
+    display:block;
+  }
+  .category, .name, .description, .product-price{
+    padding-bottom: 23px;
+  }
+}
+@media only screen and (max-width: 375px){
+   .container{
+    margin: 15px auto;
+    padding: 0 15px;
+   }
+   .product-img img{
+    max-height: 290px;
+   }
+   .product-info{
+    padding: 24px;
+   }
+   .category, .name, .description, .price{
+    padding-bottom: 16px;
+   }
+   .name{
+    font-size: 28px;
+   }
+   .description{
+    font-size: 12px;
+   }
+   p.new-price{
+    font-size: 20px;
+   }
+   button{
+    padding: 9px 0;
+
+   }
+}
